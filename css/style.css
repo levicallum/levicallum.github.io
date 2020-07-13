@@ -171,7 +171,7 @@ a {
     align-items: flex-end;
     width: 60%;
     grid-area: 3 / 2 / 4 / 3;
-    padding-bottom: 108px; }
+    padding-bottom: 107px; }
     .splash-logo img {
       height: 50px; }
 
@@ -198,7 +198,7 @@ a {
 
 /* Nav Bar */
 nav {
-  height: auto;
+  height: 3rem;
   width: 100%;
   background-color: #ffffff;
   position: fixed;
@@ -218,12 +218,31 @@ nav {
   display: flex;
   justify-content: space-between;
   align-content: center;
-  line-height: 1; }
+  line-height: 1;
+  position: fixed;
+  top: 0px;
+  right: 0px; }
   .nav-links a {
-    margin: 1em 1.5rem 1em 0rem;
+    padding: 1em 1.5rem 1em 0rem;
     letter-spacing: 0.03em; }
   .nav-links a:hover, .nav-links .active {
     font-family: "Untitled Serif Regular Italic"; }
+  .nav-links .nav-about {
+    position: absolute;
+    top: 0;
+    right: 233px; }
+  .nav-links .nav-service {
+    position: absolute;
+    top: 0;
+    right: 156px; }
+  .nav-links .nav-clients {
+    position: absolute;
+    top: 0;
+    right: 81px; }
+  .nav-links .nav-contact {
+    position: absolute;
+    top: 0;
+    right: 0px; }
 
 .mobile-nav {
   display: none; }
@@ -423,7 +442,7 @@ footer {
     width: 100%;
     display: block; }
     .split-page-container .split-page {
-      height: 50vh;
+      height: 100%;
       width: 100%;
       display: block; }
       .split-page-container .split-page .split-page-image {
@@ -434,7 +453,7 @@ footer {
           display: block;
           overflow: hidden;
           object-fit: cover;
-          height: 100%; }
+          width: 100%; }
   .quote {
     padding: 0;
     padding-top: 4.5rem;
