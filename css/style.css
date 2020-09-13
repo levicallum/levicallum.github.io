@@ -183,9 +183,6 @@ a {
   #splash.hidden {
     display: none; }
 
-.display-none {
-  display: none; }
-
 /* @keyframes fadeIn {
     to {
         opacity: 1;
@@ -497,7 +494,9 @@ footer {
 @media only screen and (max-width: 500px) {
   :root {
     --large: 1.2rem;
-    --medium: 0.9rem; } }
+    --medium: 0.9rem; }
+  .title {
+    margin-top: 2.5rem; } }
 
 @media only screen and (max-width: 900px) {
   /* Splash */
