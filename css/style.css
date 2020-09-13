@@ -148,7 +148,7 @@ a {
   background-color: #ffffff; }
 
 /* Splash Page */
-.splash {
+#splash {
   position: fixed;
   top: 0;
   left: 0;
@@ -162,7 +162,7 @@ a {
   align-content: center;
   justify-items: center;
   z-index: 200; }
-  .splash-text {
+  #splash .splash-text {
     width: 100%;
     text-align: center;
     text-align-last: center;
@@ -171,15 +171,17 @@ a {
     font-family: "Untitled Sans Regular";
     margin-top: auto;
     margin-bottom: auto; }
-  .splash-logo {
+  #splash .splash-logo {
     display: flex;
     justify-content: center;
     align-items: flex-end;
     width: 60%;
     grid-area: 3 / 2 / 4 / 3;
     padding-bottom: 107px; }
-    .splash-logo img {
+    #splash .splash-logo img {
       height: 50px; }
+  #splash.hidden {
+    display: none; }
 
 .display-none {
   display: none; }
@@ -202,30 +204,83 @@ a {
   opacity: 1;
   animation: fadeOut 2s linear forwards; }
 
+/* Cookie Banner */
+#cookie-container {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 1s ease; }
+  #cookie-container.hidden {
+    display: none; }
+  #cookie-container.fade {
+    opacity: 0; }
+  #cookie-container .cookie-background {
+    height: 100%;
+    width: 100%;
+    background-color: #f7f4f3;
+    opacity: 60%;
+    position: absolute; }
+  #cookie-container .cookie-banner {
+    width: 60%;
+    padding: 3rem;
+    display: flex;
+    background-color: #ffffff;
+    position: absolute;
+    justify-content: space-between; }
+    #cookie-container .cookie-banner .cookie-links {
+      display: flex; }
+      #cookie-container .cookie-banner .cookie-links .cookie-accept {
+        margin-right: 3rem; }
+      #cookie-container .cookie-banner .cookie-links .cookie-accept,
+      #cookie-container .cookie-banner .cookie-links .cookie-readmore {
+        text-transform: uppercase; }
+    #cookie-container .cookie-banner .cookie-message {
+      margin-right: 3rem; }
+    #cookie-container .cookie-banner .cookie-text {
+      font-family: "Untitled Sans Regular";
+      font-size: var(--small);
+      margin: 0; }
+
 /* Nav Bar */
+.nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%; }
+
 nav {
   height: 3rem;
   width: 100%;
   background-color: #ffffff;
-  position: fixed;
-  top: 0;
-  left: 0;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 99; }
+  justify-content: space-between; }
 
 .logo {
   text-transform: uppercase;
   margin-left: 1.5rem;
-  letter-spacing: 0.5em; }
+  letter-spacing: 0.5em;
+  align-self: center; }
+
+.icon {
+  align-self: center; }
+  .icon img {
+    width: auto;
+    height: 40px; }
 
 .nav-links {
   display: flex;
   justify-content: space-between;
   align-content: center;
   line-height: 1;
-  position: fixed;
+  position: relative;
   top: 0px;
   right: 0px; }
   .nav-links a {
@@ -316,12 +371,83 @@ nav {
       #contact-page .contact .contact-info div p {
         justify-self: center;
         margin: 0;
-        margin-bottom: 2em; }
-      #contact-page .contact .contact-info .contact-linkedin a:hover, #contact-page .contact .contact-info .contact-linkedin .active {
-        font-family: "Untitled Serif Regular Italic"; }
+        margin-bottom: 1em; }
+      #contact-page .contact .contact-info .contact-linkedin {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        #contact-page .contact .contact-info .contact-linkedin h3 {
+          margin: 0; }
+        #contact-page .contact .contact-info .contact-linkedin a:hover, #contact-page .contact .contact-info .contact-linkedin .active {
+          font-family: "Untitled Serif Regular Italic"; }
+        #contact-page .contact .contact-info .contact-linkedin #linkedin-logo {
+          width: 50px;
+          height: 50px; }
+        #contact-page .contact .contact-info .contact-linkedin img:hover {
+          opacity: 0.4; }
       #contact-page .contact .contact-info .contact-email a:hover, #contact-page .contact .contact-info .contact-email .active {
         font-family: "Untitled Serif Regular Italic"; }
 
+/* Privacy Page */
+.whole-page .privacy ul {
+  width: 100%;
+  padding-left: 1em; }
+  .whole-page .privacy ul li:first-of-type {
+    margin-top: 1em; }
+  .whole-page .privacy ul li p:first-of-type {
+    margin-top: 0em; }
+  .whole-page .privacy ul li p:last-of-type {
+    margin-bottom: 0em; }
+
+.whole-page .privacy p:first-of-type {
+  margin-top: 1em; }
+
+.privacy-anchor {
+  display: block;
+  position: relative;
+  height: 3rem;
+  visibility: hidden; }
+
+.privacy-header {
+  margin-top: 3em;
+  width: 100%; }
+
+#privacy-footer {
+  height: 205px; }
+  #privacy-footer .footer-content {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 3rem; }
+    #privacy-footer .footer-content .footer-logo {
+      height: 100%;
+      display: flex;
+      justify-content: center; }
+      #privacy-footer .footer-content .footer-logo img {
+        height: 50px; }
+    #privacy-footer .footer-content .footer-text {
+      display: flex;
+      flex-direction: column;
+      font-size: var(--x-small);
+      align-items: center;
+      margin-top: 2em; }
+      #privacy-footer .footer-content .footer-text p {
+        font-size: var(--x-small);
+        text-transform: uppercase;
+        margin: 0;
+        letter-spacing: 0.03em;
+        display: inline-block;
+        margin-right: 1em; }
+      #privacy-footer .footer-content .footer-text .footer-info .footer-email, #privacy-footer .footer-content .footer-text .footer-info .footer-privacy {
+        display: inline-block; }
+      #privacy-footer .footer-content .footer-text .footer-info .footer-privacy p:last-of-type {
+        margin-right: 0; }
+
+/* Footer */
 footer {
   margin-top: calc(3rem - 205px);
   height: 205px; }
@@ -375,14 +501,20 @@ footer {
 
 @media only screen and (max-width: 900px) {
   /* Splash */
-  .splash {
+  #splash {
     grid-template-columns: 10% 80% 10%; }
-    .splash-text {
+    #splash .splash-text {
       width: 80%; }
-    .splash-logo {
+    #splash .splash-logo {
       width: 60%;
       grid-row: 3 / 4;
       padding-bottom: 65px; }
+  /* Cookie Banner */
+  #cookie-container .cookie-banner {
+    width: 80%;
+    flex-direction: column; }
+    #cookie-container .cookie-banner .cookie-links {
+      margin-top: 1rem; }
   /* Home Page */
   .clmax-def {
     position: absolute;
