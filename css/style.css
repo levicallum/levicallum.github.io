@@ -125,6 +125,7 @@ a {
 
 .split-page-container {
   height: calc(100vh - 3rem);
+  min-height: 683px;
   width: 100%;
   display: flex; }
   .split-page-container .split-page {
@@ -135,7 +136,26 @@ a {
       height: 100%;
       width: 100%;
       overflow: hidden; }
-      .split-page-container .split-page .split-page-image img {
+      .split-page-container .split-page .split-page-image .image-one {
+        background-image: url("../images/model.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        height: 100%; }
+      .split-page-container .split-page .split-page-image .image-two {
+        background-image: url("../images/library.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        height: 100%; }
+      .split-page-container .split-page .split-page-image .image-three {
+        background-image: url("../images/award.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
         height: 100%; }
 
 .blue {
@@ -183,16 +203,6 @@ a {
   #splash.hidden {
     display: none; }
 
-/* @keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
-}
-
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 2s ease-in forwards;
-} */
 @keyframes fadeOut {
   to {
     opacity: 0; } }
@@ -266,12 +276,6 @@ nav {
   letter-spacing: 0.5em;
   align-self: center; }
 
-.icon {
-  align-self: center; }
-  .icon img {
-    width: auto;
-    height: 40px; }
-
 .nav-links {
   display: flex;
   justify-content: space-between;
@@ -333,6 +337,14 @@ nav {
     margin-top: 0;
     letter-spacing: 0.03em; }
 
+/* About Page */
+.whole-page .about p:last-of-type {
+  margin-bottom: 0; }
+
+.whole-page .about .about-logo img {
+  height: 80px;
+  margin: 4.5rem 90px 4.5rem 0; }
+
 /* Client Page */
 .whole-page .content .client-list {
   display: flex;
@@ -346,12 +358,12 @@ nav {
 
 /* Contact Page */
 #contact-page {
-  height: calc(100vh - 6rem);
-  min-height: auto; }
+  height: calc(100vh - 3rem);
+  min-height: 750px; }
   #contact-page .contact {
     height: 100%;
     width: 60%;
-    margin: 0 auto 3rem auto;
+    margin: 0 auto 0rem auto;
     display: flex;
     flex-direction: column;
     align-items: center; }
@@ -386,18 +398,19 @@ nav {
         font-family: "Untitled Serif Regular Italic"; }
 
 /* Privacy Page */
-.whole-page .privacy ul {
-  width: 100%;
-  padding-left: 1em; }
-  .whole-page .privacy ul li:first-of-type {
+.whole-page .privacy {
+  margin-bottom: 10rem; }
+  .whole-page .privacy ul {
+    width: 100%;
+    padding-left: 1em; }
+    .whole-page .privacy ul li:first-of-type {
+      margin-top: 1em; }
+    .whole-page .privacy ul li p:first-of-type {
+      margin-top: 0em; }
+    .whole-page .privacy ul li p:last-of-type {
+      margin-bottom: 0em; }
+  .whole-page .privacy p:first-of-type {
     margin-top: 1em; }
-  .whole-page .privacy ul li p:first-of-type {
-    margin-top: 0em; }
-  .whole-page .privacy ul li p:last-of-type {
-    margin-bottom: 0em; }
-
-.whole-page .privacy p:first-of-type {
-  margin-top: 1em; }
 
 .privacy-anchor {
   display: block;
@@ -409,45 +422,9 @@ nav {
   margin-top: 3em;
   width: 100%; }
 
-#privacy-footer {
-  height: 205px; }
-  #privacy-footer .footer-content {
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding-top: 3rem;
-    padding-bottom: 3rem; }
-    #privacy-footer .footer-content .footer-logo {
-      height: 100%;
-      display: flex;
-      justify-content: center; }
-      #privacy-footer .footer-content .footer-logo img {
-        height: 50px; }
-    #privacy-footer .footer-content .footer-text {
-      display: flex;
-      flex-direction: column;
-      font-size: var(--x-small);
-      align-items: center;
-      margin-top: 2em; }
-      #privacy-footer .footer-content .footer-text p {
-        font-size: var(--x-small);
-        text-transform: uppercase;
-        margin: 0;
-        letter-spacing: 0.03em;
-        display: inline-block;
-        margin-right: 1em; }
-      #privacy-footer .footer-content .footer-text .footer-info .footer-email, #privacy-footer .footer-content .footer-text .footer-info .footer-privacy {
-        display: inline-block; }
-      #privacy-footer .footer-content .footer-text .footer-info .footer-privacy p:last-of-type {
-        margin-right: 0; }
-
 /* Footer */
 footer {
-  margin-top: calc(3rem - 205px);
-  height: 205px; }
+  margin-top: -221px; }
   footer .footer-content {
     background-color: #ffffff;
     display: flex;
@@ -457,12 +434,9 @@ footer {
     width: 100%;
     padding-top: 3rem;
     padding-bottom: 3rem; }
-    footer .footer-content .footer-logo {
-      height: 100%;
-      display: flex;
-      justify-content: center; }
-      footer .footer-content .footer-logo img {
-        height: 50px; }
+    footer .footer-content .footer-logo img {
+      height: 80px;
+      margin: 0 90px 0 0; }
     footer .footer-content .footer-text {
       display: flex;
       flex-direction: column;
@@ -476,9 +450,7 @@ footer {
         letter-spacing: 0.03em;
         display: inline-block;
         margin-right: 1em; }
-      footer .footer-content .footer-text .footer-info .footer-email, footer .footer-content .footer-text .footer-info .footer-privacy {
-        display: inline-block; }
-      footer .footer-content .footer-text .footer-info .footer-privacy p:last-of-type {
+      footer .footer-content .footer-text .footer-info p:last-of-type {
         margin-right: 0; }
 
 @media only screen and (max-width: 1535px) {
@@ -515,9 +487,11 @@ footer {
     #cookie-container .cookie-banner .cookie-links {
       margin-top: 1rem; }
   /* Home Page */
+  #home {
+    background-image: url("../images/home_mobile.jpg"); }
   .clmax-def {
     position: absolute;
-    bottom: 46vh;
+    bottom: 7vh;
     width: 80%;
     left: 10%; }
   /* Offset for anchor */
@@ -526,6 +500,15 @@ footer {
     position: relative;
     top: -3rem;
     visibility: hidden; }
+  /* About Page */
+  .whole-page .about .about-logo img {
+    height: 45px;
+    margin: 2.5rem 55px 2.5rem 0; }
+  /* Contact Page */
+  #contact-page {
+    min-height: auto; }
+    #contact-page .contact {
+      width: 80%; }
   /* Mobile nav */
   nav {
     height: 3rem; }
@@ -606,11 +589,18 @@ footer {
         height: 100%;
         width: 100%;
         display: block; }
-        .split-page-container .split-page .split-page-image img {
-          display: block;
-          overflow: hidden;
-          object-fit: cover;
-          width: 100%; }
+        .split-page-container .split-page .split-page-image .image-one {
+          background-image: url("../images/model_mobile.jpg");
+          width: auto;
+          height: 50vh; }
+        .split-page-container .split-page .split-page-image .image-two {
+          background-image: url("../images/library_mobile.jpg");
+          width: auto;
+          height: 50vh; }
+        .split-page-container .split-page .split-page-image .image-three {
+          background-image: url("../images/award_mobile.jpg");
+          width: auto;
+          height: 50vh; }
   .quote {
     padding: 0;
     padding-top: 4.5rem;
@@ -633,20 +623,15 @@ footer {
       width: 80%;
       margin: 0;
       margin-top: 1em; }
-  /* Mobile footer */
-  /* .footer-address {
-        display: none;
-    }
-    .footer-email p{
-        display: none;
-    } */
   footer {
-    margin-top: calc(3rem - 139px);
-    height: 139px; }
+    margin-top: -114px; }
     footer .footer-content {
-      padding-top: 1.5rem;
-      padding-bottom: 1.5rem; }
-      footer .footer-content .footer-text .footer-address {
-        display: none; }
-      footer .footer-content .footer-text .footer-info .footer-email {
-        display: none; } }
+      padding-top: 1rem;
+      padding-bottom: 1rem; }
+      footer .footer-content .footer-text {
+        margin-top: 0; }
+        footer .footer-content .footer-text .footer-info .footer-address {
+          display: none; }
+      footer .footer-content .footer-logo img {
+        height: 45px;
+        margin: 0rem 55px 1rem 0; } }
